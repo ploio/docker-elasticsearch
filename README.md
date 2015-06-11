@@ -1,4 +1,4 @@
-# Portefaix Elasticsearch
+# Portefaix Elasticsearch
 
 ![logo](http://pkgs.alpinelinux.org/assets/alpinelinux-logo.svg)
 
@@ -11,6 +11,10 @@ Some [Elasticsearch][] plugins are available:
 * [ElasticSearchHead][]: `http://xxx:9200/_plugin/head/`
 * [ElasticHQ][]: `http://xxx:9200/_plugin/HQ/`
 * [Kopf][]: `http://xxx:9200/_plugin/kopf/`
+
+Ports exported are : `9200` and `9300`
+Volumes exported are : `/var/lib/elasticsearch`
+
 
 ## Supported tags
 
@@ -37,4 +41,3 @@ Nicolas Lamirault <nicolas.lamirault@gmail.com>
 [ElasticSearchHead]: http://mobz.github.io/elasticsearch-head
 [ElasticHQ]: http://www.elastichq.org
 [Kopf]: https://github.com/lmenezes/elasticsearch-kopf
-
