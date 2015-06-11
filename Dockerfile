@@ -50,4 +50,4 @@ VOLUME ["/var/lib/elasticsearch"]
 EXPOSE 9200
 EXPOSE 9300
 
-CMD ["/src/elasticsearch/bin/elasticsearch"]
+CMD ["/usr/share/elasticsearch/bin/elasticsearch"]
