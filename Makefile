@@ -23,7 +23,7 @@ WARN_COLOR=\033[33;01m
 
 DOCKER = docker
 
-IMAGE_VERSION := $(shell grep ' VERSION' Dockerfile|awk -F" " '{ print $$3 }')
+# IMAGE_VERSION := $(shell grep ' VERSION' Dockerfile|awk -F" " '{ print $$3 }')
 
 all: help
 
@@ -34,8 +34,8 @@ help:
 
 .PHONY: build
 build:
-	@echo -e "$(OK_COLOR)[$(APP)] Build $(NAMESPACE)/$(IMAGE):$(IMAGE_VERSION)$(NO_COLOR)"
-	@$(DOCKER) build -t $(NAMESPACE)/$(IMAGE):$(IMAGE_VERSION) .
+	@echo -e "$(OK_COLOR)[$(APP)] Build $(NAMESPACE)/$(IMAGE):$(version)$(NO_COLOR)"
+	@$(DOCKER) build -t $(NAMESPACE)/$(IMAGE):$(version) $(version)
 
 .PHONY: login
 login:
