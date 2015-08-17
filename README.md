@@ -15,10 +15,15 @@ Some [Elasticsearch][] plugins are available:
 Ports exported are : `9200` and `9300`
 Volumes exported are : `/var/lib/elasticsearch`
 
+## Usage
+
+    $ docker run -it -p 9200:9200 -p 9300:9300 portefaix/elasticsearch:1.7.1
 
 ## Supported tags
 
--	[`1.5.2`](https://github.com/portefaix/docker-elasticsearch/tree/1.5.2)
+- `1.5.2`
+- `1.6.0`
+- `1.7.1`
 
 ## License
 

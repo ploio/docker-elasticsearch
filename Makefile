@@ -23,19 +23,21 @@ WARN_COLOR=\033[33;01m
 
 DOCKER = docker
 
-# IMAGE_VERSION := $(shell grep ' VERSION' Dockerfile|awk -F" " '{ print $$3 }')
+ifneq ($(version),)
+	VERSION := $(shell grep ' VERSION' ${version}/Dockerfile|awk -F" " '{ print $$3 }')
+endif
 
 all: help
 
 help:
 	@echo -e "$(OK_COLOR)==== $(APP) ====$(NO_COLOR)"
-	@echo -e "$(WARN_COLOR)- build     : Make the Docker image"
-	@echo -e "$(WARN_COLOR)- publish   : Publish the image"
+	@echo -e "$(WARN_COLOR)- build version=xx   : Make the Docker image"
+	@echo -e "$(WARN_COLOR)- publish version=xx : Publish the image"
 
 .PHONY: build
 build:
-	@echo -e "$(OK_COLOR)[$(APP)] Build $(NAMESPACE)/$(IMAGE):$(version)$(NO_COLOR)"
-	@$(DOCKER) build -t $(NAMESPACE)/$(IMAGE):$(version) $(version)
+	@echo -e "$(ok_color)[$(app)] build $(NAMESPACE)/$(IMAGE):$(VERSION)$(no_color)"
+	@$(DOCKER) build -t $(NAMESPACE)/$(IMAGE):${VERSION} $(version)
 
 .PHONY: login
 login:
@@ -43,6 +45,6 @@ login:
 
 .PHONY: publish
 publish:
-	@echo -e "$(OK_COLOR)[$(APP)] Publish $(NAMESPACE)/$(IMAGE):$(IMAGE_VERSION)$(NO_COLOR)"
-	@$(DOCKER) push $(NAMESPACE)/$(IMAGE):$(IMAGE_VERSION)
+	@echo -e "$(OK_COLOR)[$(APP)] Publish $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
+	@$(DOCKER) push $(NAMESPACE)/$(IMAGE):$(VERSION)
 
