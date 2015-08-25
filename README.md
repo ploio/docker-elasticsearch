@@ -27,12 +27,12 @@ Volumes exported are : `/var/lib/elasticsearch`
 
 ## License
 
-See [LICENSE][] for the complete license.
+See [LICENSE](LICENSE) for the complete license.
 
 
 ## Changelog
 
-A [ChangeLog.md][] is available.
+A [ChangeLog.md](ChangeLog.md) is available.
 
 
 ## Contact
