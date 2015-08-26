@@ -1,5 +1,7 @@
 # Portefaix Elasticsearch
 
+[![Circle CI](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/master.svg?style=svg)](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/master)
+
 ![logo](http://pkgs.alpinelinux.org/assets/alpinelinux-logo.svg)
 
 [Alpine Linux][] is a Linux distribution built around musl libc and BusyBox.
