@@ -1,5 +1,7 @@
 # Portefaix Elasticsearch
 
+[![Circle CI](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/master.svg?style=svg)](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/master)
+
 ![logo](http://pkgs.alpinelinux.org/assets/alpinelinux-logo.svg)
 
 [Alpine Linux][] is a Linux distribution built around musl libc and BusyBox.
@@ -27,12 +29,12 @@ Volumes exported are : `/var/lib/elasticsearch`
 
 ## License
 
-See [LICENSE][] for the complete license.
+See [LICENSE](LICENSE) for the complete license.
 
 
 ## Changelog
 
-A [ChangeLog.md][] is available.
+A [ChangeLog.md](ChangeLog.md) is available.
 
 
 ## Contact
