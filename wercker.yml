@@ -1,0 +1,33 @@
+box: wercker-labs/docker
+build:
+  steps:
+    - script:
+        name: Docker info
+        code: docker info
+    - script:
+        name: build image 1.5
+        code: docker build -t portefaix/elasticsearch:1.5 1.5
+    - script:
+        name: test container 1.5
+        code: |
+          docker run -d -p 9205:9200 portefaix/elasticsearch:1.5
+          sleep 15
+          curl --retry 10 --retry-delay 5 -L -I http://localhost:9205
+    - script:
+        name: build image 1.6
+        code: docker build -t portefaix/elasticsearch:1.6 1.6
+    - script:
+        name: test container 1.6
+        code: |
+          docker run -d -p 9206:9200 portefaix/elasticsearch:1.6
+          sleep 15
+          curl --retry 10 --retry-delay 5 -L -I http://localhost:9206
+    - script:
+        name: build image 1.7
+        code: docker build -t portefaix/elasticsearch:1.7 1.7
+    - script:
+        name: test container 1.7
+        code: |
+          docker run -d -p 9205:9200 portefaix/elasticsearch:1.7
+          sleep 15
+          curl --retry 10 --retry-delay 5 -L -I http://localhost:9207
