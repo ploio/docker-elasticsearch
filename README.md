@@ -15,7 +15,7 @@ Some [Elasticsearch][] plugins are available:
 * [Kopf][]: `http://xxx:9200/_plugin/kopf/`
 
 Ports exported are : `9200` and `9300`
-Volumes exported are : `/var/lib/elasticsearch`
+Volumes exported are : `/var/lib/elasticsearch` and `/var/log/elasticsearch`
 
 ## Usage
 

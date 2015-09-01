@@ -36,8 +36,13 @@ help:
 
 .PHONY: build
 build:
-	@echo -e "$(ok_color)[$(app)] build $(NAMESPACE)/$(IMAGE):$(VERSION)$(no_color)"
+	@echo -e "$(OK_COLOR)[$(APP)] build $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
 	@$(DOCKER) build -t $(NAMESPACE)/$(IMAGE):${VERSION} $(version)
+
+.PHONY: run
+run:
+	@echo -e "$(OK_COLOR)[$(APP)] run $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
+	docker run --rm=true -p 9200:9200 -p 9300:9300 portefaix/elasticsearch:$(VERSION)
 
 .PHONY: login
 login:
@@ -47,4 +52,3 @@ login:
 publish:
 	@echo -e "$(OK_COLOR)[$(APP)] Publish $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
 	@$(DOCKER) push $(NAMESPACE)/$(IMAGE):$(VERSION)
-
