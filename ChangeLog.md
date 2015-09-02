@@ -1,6 +1,10 @@
 ChangeLog
 ==============
 
+# Version 0.5.0 (09/02/2015)
+
+- Add Elasticsearch 2.0.0-beta1
+
 # Version 0.4.0 (08/26/2015)
 
 - Setup CircleCI
