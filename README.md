@@ -26,6 +26,7 @@ Volumes exported are : `/var/lib/elasticsearch` and `/var/log/elasticsearch`
 - `1.5.2` [![](https://badge.imagelayers.io/portefaix/elasticsearch:1.5.2.svg)](https://imagelayers.io/?images=portefaix/elasticsearch:1.5.2 'imagelayers.io')
 - `1.6.0` [![](https://badge.imagelayers.io/portefaix/elasticsearch:1.6.0.svg)](https://imagelayers.io/?images=portefaix/elasticsearch:1.6.0 'imagelayers.io')
 - `1.7.1` [![](https://badge.imagelayers.io/portefaix/elasticsearch:1.7.1.svg)](https://imagelayers.io/?images=portefaix/elasticsearch:1.7.1 'imagelayers.io')
+- `1.7.2` [![](https://badge.imagelayers.io/portefaix/elasticsearch:1.7.2.svg)](https://imagelayers.io/?images=portefaix/elasticsearch:1.7.2 'imagelayers.io')
 
 ## License
 
