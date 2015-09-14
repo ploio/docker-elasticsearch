@@ -1,6 +1,10 @@
 ChangeLog
 ==============
 
+# Version 0.6.0 (14/02/2015)
+
+- Add Elasticsearch 1.7.2 version
+
 # Version 0.5.0 (09/02/2015)
 
 - Add Elasticsearch 2.0.0-beta1
