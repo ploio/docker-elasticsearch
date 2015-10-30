@@ -1,4 +1,4 @@
-# VERSION 2.0.0-beta1
+# VERSION 2.0.0
 # AUTHOR:         Nicolas Lamirault <nicolas.lamirault@gmail.com>
 # DESCRIPTION:    portefaix/elasticsearch
 
