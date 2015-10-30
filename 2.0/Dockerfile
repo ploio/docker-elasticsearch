@@ -10,7 +10,7 @@ ENV JAVA_VERSION=8 \
     JAVA_BUILD=14 \
     JAVA_HOME=/usr/lib/jvm/default-jvm
 
-ENV ES_VERSION 2.0.0-beta1
+ENV ES_VERSION 2.0.0
 
 RUN apk add --update wget curl ca-certificates
 
@@ -63,6 +63,11 @@ RUN set -ex \
          mkdir -p "$path"; \
          chown -R elasticsearch:elasticsearch "$path"; \
        done
+
+RUN /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head && \
+	/usr/share/elasticsearch/bin/plugin install lmenezes/elasticsearch-kopf/2.0 && \
+	/usr/share/elasticsearch/bin/plugin install license && \
+	/usr/share/elasticsearch/bin/plugin install --verbose marvel-agent
 
 VOLUME ["/var/lib/elasticsearch"]
 VOLUME ["/var/log/elasticsearch"]

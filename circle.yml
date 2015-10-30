@@ -19,13 +19,13 @@ dependencies:
 
 test:
   override:
-    - docker run -d -p 9205:9200 portefaix/elasticsearch:1.5; sleep 20
+      - docker run -d -p 9205:9200 -p 9305:9300 portefaix/elasticsearch:1.5; sleep 20
     - curl --retry 10 --retry-delay 5 -v http://localhost:9205
-    - docker run -d -p 9206:9200 portefaix/elasticsearch:1.6; sleep 20
+    - docker run -d -p 9206:9200 -p 9306:9300 portefaix/elasticsearch:1.6; sleep 20
     - curl --retry 10 --retry-delay 5 -v http://localhost:9206
-    - docker run -d -p 9207:9200 portefaix/elasticsearch:1.7; sleep 20
+    - docker run -d -p 9207:9200 -p 9307:9300 portefaix/elasticsearch:1.7; sleep 20
     - curl --retry 10 --retry-delay 5 -v http://localhost:9207
-    - docker run -d -p 9208:9200 portefaix/elasticsearch:2.0; sleep 20
+    - docker run -d -p 9208:9200 -p 9308:9300 portefaix/elasticsearch:2.0; sleep 20
     - curl --retry 10 --retry-delay 5 -v http://localhost:9208
 
 #deployment:
