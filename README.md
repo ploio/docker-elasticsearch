@@ -1,6 +1,10 @@
 # Portefaix Elasticsearch
 
+* Master :
 [![Circle CI](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/master.svg?style=svg)](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/master)
+
+* Develop :
+[![Circle CI](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/develop.svg?style=svg)](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/develop)
 
 ![logo](https://pkgs.alpinelinux.org/assets/alpinelinux-logo.svg)
 
