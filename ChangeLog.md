@@ -1,6 +1,10 @@
 ChangeLog
 ==============
 
+# Version 0.7.0 (10/30/2015)
+
+- Upgrade to Elasticsearch 2.0.0
+
 # Version 0.7.0 (10/19/2015)
 
 - Upgrade to Elasticsearch 1.7.3
