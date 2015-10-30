@@ -28,30 +28,31 @@ RUN cd /tmp && \
     "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     tar xzf "jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     mkdir -p /usr/lib/jvm && \
-    mv "/tmp/jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "/opt/jdk" && \
+    mv "/tmp/jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "/usr/lib/jvm/java-${JAVA_VERSION}-oracle" && \
     ln -s "java-${JAVA_VERSION}-oracle" /usr/lib/jvm/default-jvm && \
-    ln -s /opt/jdk/bin/java /usr/bin/java && \
-    ln -s /opt/jdk/bin/javac /usr/bin/javac && \
-    rm -rf /opt/jdk/*src.zip \
-           /opt/jdk/lib/missioncontrol \
-           /opt/jdk/lib/visualvm \
-           /opt/jdk/lib/*javafx* \
-           /opt/jdk/jre/lib/plugin.jar \
-           /opt/jdk/jre/lib/ext/jfxrt.jar \
-           /opt/jdk/jre/bin/javaws \
-           /opt/jdk/jre/lib/javaws.jar \
-           /opt/jdk/jre/lib/desktop \
-           /opt/jdk/jre/plugin \
-           /opt/jdk/jre/lib/deploy* \
-           /opt/jdk/jre/lib/*javafx* \
-           /opt/jdk/jre/lib/*jfx* \
-           /opt/jdk/jre/lib/amd64/libdecora_sse.so \
-           /opt/jdk/jre/lib/amd64/libprism_*.so \
-           /opt/jdk/jre/lib/amd64/libfxplugins.so \
-           /opt/jdk/jre/lib/amd64/libglass.so \
-           /opt/jdk/jre/lib/amd64/libgstreamer-lite.so \
-           /opt/jdk/jre/lib/amd64/libjavafx*.so \
-           /opt/jdk/jre/lib/amd64/libjfx*.so
+    ln -s /usr/lib/jvm/default-jvm/bin/java /usr/bin/java && \
+    ln -s /usr/lib/jvm/default-jvm/bin/javac /usr/bin/javac && \
+    rm -rf $JAVA_HOME/*src.zip && \
+    rm -rf /usr/lib/jvm/default-jvm/*src.zip \
+           /usr/lib/jvm/default-jvm/lib/missioncontrol \
+           /usr/lib/jvm/default-jvm/lib/visualvm \
+           /usr/lib/jvm/default-jvm/lib/*javafx* \
+           /usr/lib/jvm/default-jvm/jre/lib/plugin.jar \
+           /usr/lib/jvm/default-jvm/jre/lib/ext/jfxrt.jar \
+           /usr/lib/jvm/default-jvm/jre/bin/javaws \
+           /usr/lib/jvm/default-jvm/jre/lib/javaws.jar \
+           /usr/lib/jvm/default-jvm/jre/lib/desktop \
+           /usr/lib/jvm/default-jvm/jre/plugin \
+           /usr/lib/jvm/default-jvm/jre/lib/deploy* \
+           /usr/lib/jvm/default-jvm/jre/lib/*javafx* \
+           /usr/lib/jvm/default-jvm/jre/lib/*jfx* \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libdecora_sse.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libprism_*.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libfxplugins.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libglass.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libgstreamer-lite.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libjavafx*.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libjfx*.so
 
 RUN curl -o /usr/local/bin/gosu -sSL "https://github.com/tianon/gosu/releases/download/1.2/gosu-amd64" && \
 	chmod +x /usr/local/bin/gosu
