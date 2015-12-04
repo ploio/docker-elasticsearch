@@ -10,7 +10,7 @@ ENV JAVA_VERSION=8 \
     JAVA_BUILD=14 \
     JAVA_HOME=/opt/jdk
 
-ENV ES_VERSION 2.0.0
+ENV ES_VERSION 2.0.1
 
 RUN apk add --update wget curl ca-certificates
 
