@@ -16,6 +16,7 @@ dependencies:
     - docker build -t portefaix/elasticsearch:1.6 1.6
     - docker build -t portefaix/elasticsearch:1.7 1.7
     - docker build -t portefaix/elasticsearch:2.0 2.0
+    - docker build -t portefaix/elasticsearch:2.1 2.1
 
 test:
   override:
@@ -27,6 +28,8 @@ test:
     - curl --retry 10 --retry-delay 5 -v http://localhost:9217
     - docker run -d -p 9218:9200 -p 9318:9300 portefaix/elasticsearch:2.0; sleep 20
     - curl --retry 10 --retry-delay 5 -v http://localhost:9218
+    - docker run -d -p 9219:9200 -p 9319:9300 portefaix/elasticsearch:2.1; sleep 20
+    - curl --retry 10 --retry-delay 5 -v http://localhost:9219
 
 #deployment:
 #  hub: 
