@@ -6,7 +6,7 @@
 * Develop :
 [![Circle CI](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/develop.svg?style=svg)](https://circleci.com/gh/portefaix/docker-elasticsearch/tree/develop)
 
-![logo](https://pkgs.alpinelinux.org/assets/alpinelinux-logo.svg)
+![logo](https://raw.githubusercontent.com/1science/docker-alpine/latest/logo.png)
 
 [Alpine Linux][] is a Linux distribution built around musl libc and BusyBox.
 This image is based on the official Alpine Linux.
