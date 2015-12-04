@@ -1,4 +1,4 @@
-# VERSION 2.0.1
+# VERSION 2.0.1.1
 # AUTHOR:         Nicolas Lamirault <nicolas.lamirault@gmail.com>
 # DESCRIPTION:    portefaix/elasticsearch
 
@@ -89,8 +89,7 @@ RUN /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head && \
 	/usr/share/elasticsearch/bin/plugin install license && \
 	/usr/share/elasticsearch/bin/plugin install --verbose marvel-agent
 
-VOLUME ["/var/lib/elasticsearch"]
-VOLUME ["/var/log/elasticsearch"]
+VOLUME ["/usr/share/elasticsearch/data"]
 
 EXPOSE 9200
 EXPOSE 9300
