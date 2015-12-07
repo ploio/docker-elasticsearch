@@ -1,12 +1,11 @@
 ChangeLog
 ==============
 
-# Version 0.7.0 (10/30/2015)
+# Version 0.7.0 (12/07/2015)
 
-- Upgrade to Elasticsearch 2.0.0
-
-# Version 0.7.0 (10/19/2015)
-
+- ``FIX`` build on CircleCI
+- Add Elasticsearch 2.1.0
+- Upgrade to Elasticsearch 2.0.1
 - Upgrade to Elasticsearch 1.7.3
 
 # Version 0.6.0 (14/09/2015)
