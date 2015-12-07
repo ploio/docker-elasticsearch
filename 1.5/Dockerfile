@@ -32,7 +32,27 @@ RUN cd /tmp && \
     ln -s "java-${JAVA_VERSION}-oracle" /usr/lib/jvm/default-jvm && \
     ln -s /usr/lib/jvm/default-jvm/bin/java /usr/bin/java && \
     ln -s /usr/lib/jvm/default-jvm/bin/javac /usr/bin/javac && \
-    rm -rf $JAVA_HOME/*src.zip
+    rm -rf $JAVA_HOME/*src.zip && \
+    rm -rf /usr/lib/jvm/default-jvm/*src.zip \
+           /usr/lib/jvm/default-jvm/lib/missioncontrol \
+           /usr/lib/jvm/default-jvm/lib/visualvm \
+           /usr/lib/jvm/default-jvm/lib/*javafx* \
+           /usr/lib/jvm/default-jvm/jre/lib/plugin.jar \
+           /usr/lib/jvm/default-jvm/jre/lib/ext/jfxrt.jar \
+           /usr/lib/jvm/default-jvm/jre/bin/javaws \
+           /usr/lib/jvm/default-jvm/jre/lib/javaws.jar \
+           /usr/lib/jvm/default-jvm/jre/lib/desktop \
+           /usr/lib/jvm/default-jvm/jre/plugin \
+           /usr/lib/jvm/default-jvm/jre/lib/deploy* \
+           /usr/lib/jvm/default-jvm/jre/lib/*javafx* \
+           /usr/lib/jvm/default-jvm/jre/lib/*jfx* \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libdecora_sse.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libprism_*.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libfxplugins.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libglass.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libgstreamer-lite.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libjavafx*.so \
+           /usr/lib/jvm/default-jvm/jre/lib/amd64/libjfx*.so
 
 RUN apk del wget ca-certificates && \
     rm /tmp/* /var/cache/apk/*

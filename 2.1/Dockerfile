@@ -1,4 +1,4 @@
-# VERSION 2.0.1.1
+# VERSION 2.1.0.1
 # AUTHOR:         Nicolas Lamirault <nicolas.lamirault@gmail.com>
 # DESCRIPTION:    portefaix/elasticsearch
 
@@ -10,7 +10,7 @@ ENV JAVA_VERSION=8 \
     JAVA_BUILD=14 \
     JAVA_HOME=/opt/jdk
 
-ENV ES_VERSION 2.0.1
+ENV ES_VERSION 2.1.0
 
 RUN apk add --update wget curl ca-certificates
 
