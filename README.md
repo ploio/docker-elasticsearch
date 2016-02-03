@@ -15,7 +15,6 @@ The following [Elasticsearch][] plugins are installed :
 
 Some [Elasticsearch][] plugins are available:
 * [ElasticSearchHead][]: `http://xxx:9200/_plugin/head/`
-* [ElasticHQ][]: `http://xxx:9200/_plugin/HQ/`
 * [Kopf][]: `http://xxx:9200/_plugin/kopf/`
 
 Ports exported are : `9200` and `9300`
@@ -33,6 +32,7 @@ Volumes exported is : `/usr/share/elasticsearch/data`
 - `1.7.2` [![](https://badge.imagelayers.io/portefaix/elasticsearch:1.7.2.svg)](https://imagelayers.io/?images=portefaix/elasticsearch:1.7.2 'imagelayers.io')
 - `2.0.0` [![](https://badge.imagelayers.io/portefaix/elasticsearch:2.0.0.svg)](https://imagelayers.io/?images=portefaix/elasticsearch:2.0.0 'imagelayers.io')
 - `2.1.0` [![](https://badge.imagelayers.io/portefaix/elasticsearch:2.1.0.svg)](https://imagelayers.io/?images=portefaix/elasticsearch:2.1.0 'imagelayers.io')
+- `2.2.0` [![](https://badge.imagelayers.io/portefaix/elasticsearch:2.2.0.svg)](https://imagelayers.io/?images=portefaix/elasticsearch:2.2.0 'imagelayers.io')
 
 ## License
 

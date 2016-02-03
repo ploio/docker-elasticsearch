@@ -1,6 +1,12 @@
 ChangeLog
 ==============
 
+# Version 1.0.0 (02/03/2016)
+
+- Add Elasticsearch 2.2.0
+- Update build
+- Update documentation
+
 # Version 0.7.0 (12/07/2015)
 
 - ``FIX`` build on CircleCI
