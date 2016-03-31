@@ -41,7 +41,7 @@ test:
     - curl --retry 10 --retry-delay 5 -v http://localhost:9220
     - docker stop es2.2
     - docker run -d -p 9221:9200 -p 9321:9300 --name es2.3 portefaix/elasticsearch:2.3; sleep 20
-    - curl --retry 10 --retry-delay 5 -v http://localhost:9219
+    - curl --retry 10 --retry-delay 5 -v http://localhost:9221
     - docker stop es2.3
 
 #deployment:
