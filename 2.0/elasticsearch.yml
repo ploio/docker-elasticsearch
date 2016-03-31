@@ -34,7 +34,7 @@ path.data: /usr/share/elasticsearch/data
 #
 # Path to log files:
 #
-path.logs: /usr/share/elasticsearch/logs
+path.logs: /var/log/elasticsearch
 #
 # ----------------------------------- Memory -----------------------------------
 #

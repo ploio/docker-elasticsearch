@@ -4,7 +4,7 @@ ChangeLog
 # Version 1.1.0 (03/31/2016)
 
 - Add Elasticsearch 2.3.0 version
-- ``FIX`` ES 2.2 build image
+- ``FIX`` Build images
 
 # Version 1.0.0 (02/03/2016)
 
