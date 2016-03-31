@@ -1,4 +1,4 @@
-# VERSION 1.7.3
+# VERSION 2.3.0
 # AUTHOR:         Nicolas Lamirault <nicolas.lamirault@gmail.com>
 # DESCRIPTION:    portefaix/elasticsearch
 
@@ -7,11 +7,11 @@ MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ENV JAVA_VERSION=8 \
     JAVA_UPDATE=77 \
-    JAVA_BUILD=07 \
+    JAVA_BUILD=03 \
     JAVA_PACKAGE=jdk \
     JAVA_HOME=/jre
 
-ENV ES_VERSION 1.7.5
+ENV ES_VERSION 2.3.0
 ENV GLIBC_PKG_VERSION=2.23-r1
 
 RUN apk add --update wget curl ca-certificates
@@ -49,9 +49,10 @@ RUN curl -o /usr/local/bin/gosu -sSL "https://github.com/tianon/gosu/releases/do
 	chmod +x /usr/local/bin/gosu
 
 # Install Elasticsearch
-RUN curl -Ls https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-$ES_VERSION.tar.gz | tar -xz -C /usr/share && \
+RUN curl -Ls http://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/$ES_VERSION/elasticsearch-$ES_VERSION.tar.gz | tar -xz -C /usr/share && \
     mv /usr/share/elasticsearch-$ES_VERSION /usr/share/elasticsearch
 COPY ./elasticsearch.yml /usr/share/elasticsearch/elasticsearch.yml
+COPY logging.yml /usr/share/elasticsearch/config/
 COPY docker-entrypoint.sh /
 
 RUN apk del curl wget ca-certificates && \
@@ -77,7 +78,10 @@ RUN set -ex \
 RUN /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head && \
     /usr/share/elasticsearch/bin/plugin install lmenezes/elasticsearch-kopf/2.0
 
-VOLUME ["/var/lib/elasticsearch/"]
+VOLUME ["/usr/share/elasticsearch/data"]
+
+EXPOSE 9200
+EXPOSE 9300
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 

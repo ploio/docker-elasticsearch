@@ -1,4 +1,4 @@
-# Copyright (C) 2015  Nicolas Lamirault <nicolas.lamirault@gmail.com>
+# Copyright (C) 2015, 2016  Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -32,6 +32,7 @@ all: help
 help:
 	@echo -e "$(OK_COLOR)==== $(APP) ====$(NO_COLOR)"
 	@echo -e "$(WARN_COLOR)- build version=xx   : Make the Docker image"
+	@echo -e "$(WARN_COLOR)- debug version=xx   : Run a bash session"
 	@echo -e "$(WARN_COLOR)- run version=xx     : Run the Docker image"
 	@echo -e "$(WARN_COLOR)- publish version=xx : Publish the image"
 
@@ -44,6 +45,11 @@ build:
 run:
 	@echo -e "$(OK_COLOR)[$(APP)] run $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
 	docker run --rm=true -p 9200:9200 -p 9300:9300 --name=portefaix_elasticsearch portefaix/elasticsearch:$(VERSION)
+
+.PHONY: debug
+debug:
+	@echo -e "$(OK_COLOR)[$(APP)] run $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
+	docker run --rm=true -it --name=portefaix_elasticsearch portefaix/elasticsearch:$(VERSION)
 
 .PHONY: login
 login:
