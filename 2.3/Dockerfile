@@ -24,7 +24,6 @@ RUN mkdir -p /etc/apk/keys/ && \
     wget -q --no-check-certificate -O /etc/apk/keys/andyshinn.rsa.pub https://raw.githubusercontent.com/andyshinn/alpine-pkg-glibc/master/andyshinn.rsa.pub && \
     wget -q --no-check-certificate https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.23-r1/glibc-2.23-r1.apk && \
     apk add glibc-2.23-r1.apk
-# RUN apk --no-cache -X http://apkproxy.heroku.com/andyshinn/alpine-pkg-glibc add --update glibc-${GLIBC_PKG_VERSION}.apk glibc-bin-${GLIBC_PKG_VERSION}.apk glibc-i18n-${GLIBC_PKG_VERSION}.apk /usr/glibc/usr/bin/ldconfig /lib /usr/glibc/usr/lib
 
 # Install Oracle Java
 RUN curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u77-b03/server-jre-8u77-linux-x64.tar.gz" -o /tmp/java.tar.gz && \
