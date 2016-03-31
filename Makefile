@@ -44,7 +44,7 @@ build:
 .PHONY: run
 run:
 	@echo -e "$(OK_COLOR)[$(APP)] run $(NAMESPACE)/$(IMAGE):$(VERSION)$(NO_COLOR)"
-	docker run --rm=true -p 9200:9200 -p 9300:9300 portefaix/elasticsearch:$(VERSION)
+	docker run --rm=true -p 9200:9200 -p 9300:9300 --name=portefaix_elasticsearch portefaix/elasticsearch:$(VERSION)
 
 .PHONY: debug
 debug:

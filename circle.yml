@@ -16,6 +16,7 @@ dependencies:
     - docker build -t portefaix/elasticsearch:1.6 1.6
     - docker build -t portefaix/elasticsearch:1.7 1.7
     - docker build -t portefaix/elasticsearch:2.0 2.0
+    - docker build -t portefaix/elasticsearch:2.1 2.1
     - docker build -t portefaix/elasticsearch:2.2 2.2
     - docker build -t portefaix/elasticsearch:2.3 2.3
 
